@@ -9,9 +9,9 @@ function Authpage() {
     const [code, setcode] = useState("");
   return (
     <>
-    {step === 1 && <SendOtpForm />}
-    {step === 2 && <CheckOtpForm />}
-    <div>Authpage</div>
+    {step === 1 && <SendOtpForm setStep={setStep} mobile={mobile} setmobile={setmobile} />}
+    {step === 2 && <CheckOtpForm  code={code}  setcode={setcode}  mobile={mobile} setmobile={setmobile} setStep={setStep} />}
+
     </>
   )
 }
