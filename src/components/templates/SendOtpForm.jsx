@@ -1,6 +1,8 @@
 import React from 'react'
 import {sendOtp} from "services/ayth.js"
+import styles from "../templates/SendOtp.module.css"
 console.log(document.cookie)
+
 
 function SendOtpForm({mobile,setmobile,setStep}) {
 
@@ -14,7 +16,7 @@ if (res) setStep(2)
 
   }
   return (
-<form onSubmit={submithandeler}>
+<form onSubmit={submithandeler} className={styles.form}>
 <p>ورود به حساب کاربری</p>
 <span>
   برای استفاده از امکانات دیوار لطفا شماره مبایل خود را وارد کنید .کد تایید به این شماره پیامک خواهد شد 

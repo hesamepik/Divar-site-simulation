@@ -6,13 +6,13 @@
 
 body {
   margin: auto;
-  max-width: 1400px;
-  min-height: 100vh;
-  padding: 10px;
+  max-width: auto;
+  min-height: auto;
+  padding: auto;
 }
 
 * {
-  padding: 0;
+  padding:0;
   margin: 0;
   box-sizing: border-box;
 }

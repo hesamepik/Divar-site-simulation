@@ -3,7 +3,8 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { checkOto } from "services/ayth.js"
 import {setCookie} from "utils/cookie.js"
-import { getprofile } from '../../services/user'
+import { getprofile } from 'services/user'
+import styles from "../templates/CheckOtp.module.css"
 
 function CheckOtpForm({code,setcode,setStep,mobile,setmobile}) {
   const navigate=useNavigate()
@@ -31,14 +32,14 @@ alert("کد غلطه")
   }
   return (
    <>
-   <form onSubmit={submithandeler}>
+   <form onSubmit={submithandeler} className={styles.form}>
 <p> تایید کد اس ام اس شده </p>
 <span>کد را وارد کنید {mobile} کد پیامک شده به شماره </span>
 
 <label htmlFor='input'> کد تایید را وارد کنید </label>
 <input type="text" id="input" placeholder='کد تایید '  value={code} onChange={(e)=>setcode(e.target.value)}/>
 <button type='submit'> ورود   </button>
-<button type='submit' onClick={()=>{setStep(1)}}> ویرایش شماره   </button>
+<button type='submit' onClick={()=>{setStep(1)}} className={styles.backbutton}> ویرایش شماره   </button>
    </form>
    
    

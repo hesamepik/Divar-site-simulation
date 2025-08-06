@@ -10,7 +10,8 @@ const paths =[
 "services",
 "styles",
 "utils",
-"router"
+"router",
+"Layout"
 ]
 // https://vitejs.dev/config/
 export default defineConfig({
