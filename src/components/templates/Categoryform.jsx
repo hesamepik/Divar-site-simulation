@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import sytles from "../templates/Categoryform.module.css"
-import { useMutation } from '@tanstack/react-query'
-import addcategory from '../../services/admin'
+import { useMutation,useQueryClient } from '@tanstack/react-query'
+import {addcategory} from '../../services/admin'
 function Categoryform() {
-
+const queryclient=useQueryClient()
     const [form , setform]=useState({name:"",slug:"",icon:""})
 
-    const {mutate,isLoading,error,data}=useMutation(addcategory)
+    const {mutate,isLoading,error,data}=useMutation(addcategory,{
+      onSuccess:()=>queryclient.invalidateQueries("get-category")
+    })
 
 
 
