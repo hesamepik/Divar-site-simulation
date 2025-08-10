@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { getcategory } from '../../services/admin'
 import { useQuery } from '@tanstack/react-query'
 import styles from "../templates/Addpost.module.css"
+import { getCookie } from 'utils/cookie'
+import axios from 'axios'
+import toast, { Toaster } from 'react-hot-toast'
 
 function Addpost() {
     const [form, setform ]=useState({
@@ -26,8 +29,27 @@ setform({...form,[name]:event.target.value})
 
     const addhandeler=(event)=>{
 event.preventDefault()
-console.log(form)
+const formData=new FormData()
+for (let i in form ){
+  formData.append(i,form[i])
+}
+
+
+const token =getCookie("accessToken");
+
+axios.post("http://localhost:3400/post/create",formData,{headers:{"Content-Type":"multipart/form-data",
+Authorization:`bearer ${token}`,
+},
+})
+.then((res)=>toast.success('موفقیت امیز بود'))
+.catch((error)=>toast.error("مشکلی پیش امده "))
+
     }
+
+
+    
+console.log(form)
+    
   return (
 <form onChange={chanehand} className={styles.form}>
 <h3>افزودن اگهی</h3>
@@ -55,8 +77,10 @@ console.log(form)
 <label htmlFor='images'> شهر</label>
 <input type="file" name='images' id='images' />
 <button onClick={addhandeler} >ایجاد</button>
+<Toaster/>
 </form>
   )
+
 }
 
 export default Addpost
