@@ -1,6 +1,7 @@
 const setCookie=(tokens)=>{
     document.cookie=`accessToken=${tokens.accessToken}; max-age=${1*24*60*60}`
       document.cookie=`refreshToken=${tokens.refreshToken}; max-age=${1*24*60*60}`
+      document.cookie = "delete=expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
  function getCookie(name) {
@@ -10,4 +11,9 @@ const setCookie=(tokens)=>{
   return value ? value.split("=")[1] : null;
 }
 
-export  {setCookie,getCookie}
+
+function deleteCookie(name) {
+  document.cookie = name + '=; max-age=0; path=/';
+}
+
+export  {setCookie,getCookie,deleteCookie}

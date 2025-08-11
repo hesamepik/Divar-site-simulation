@@ -5,6 +5,7 @@
     border-bottom: 2px solid rgb(234, 234, 234);
     padding:10px ;
     margin-bottom: 20px ;
+    position: relative; 
 }
 .logo{
     width: 45px;
@@ -40,3 +41,31 @@ display: flex;
     border-radius: 5px;
     margin-right: 40px;
 }
+.detailsMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 8px;
+    right: 104rem;
+    top: 3rem;
+    width: 180px;
+    z-index: 1000;
+}
+
+  .detailsMenu p {
+    margin: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .detailsMenu p:hover {
+    background-color: #f0f0f0;
+  }
+  
