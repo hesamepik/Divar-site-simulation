@@ -1,7 +1,7 @@
 # 🏠 پروژه دیواره (Divaare)
 
 <p align="center">
-  <img src="../redmi_img/homepage.png" alt="Divaare Banner" width="800"/>
+  <img src="homepage.png" alt="Divaare Banner" width="800"/>
 </p>
 
 ## 📌 معرفی پروژه
@@ -28,12 +28,12 @@
 
 ## 📷 تصاویر پروژه
 <p align="center">
-  <img src="../redmi_img/admin.png" alt="صفحه اصلی" width="700"/>
+  <img src="admin.png" alt="صفحه اصلی" width="700"/>
   صفحه ادمین 
 </p>
 
 <p align="center">
-  <img src="../redmi_img/login.png" alt="صفحه جستجو" width="700"/>
+  <img src="login.png" alt="صفحه جستجو" width="700"/>
 </p>
 
 ---
