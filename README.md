@@ -33,7 +33,7 @@
 </p>
 
 <p align="center">
-  <img src="../redmi_img/login.png.png" alt="صفحه جستجو" width="700"/>
+  <img src="../redmi_img/login.png" alt="صفحه جستجو" width="700"/>
 </p>
 
 ---
