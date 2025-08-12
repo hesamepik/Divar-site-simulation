@@ -15,4 +15,11 @@ return api.get("/post/my")
 const deletpost=()=>{
   return api.post("/delete")
   }
-export {getprofile,getpost,deletpost}
+
+
+  const getallpost=()=>{
+    return api.get("")
+    }
+
+
+export {getprofile,getpost,deletpost,getallpost}

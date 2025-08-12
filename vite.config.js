@@ -11,7 +11,8 @@ const paths =[
 "styles",
 "utils",
 "router",
-"Layout"
+"Layout",
+"templates"
 
 ]
 // https://vitejs.dev/config/

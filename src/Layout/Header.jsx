@@ -5,7 +5,7 @@ import { deleteCookie, getCookie, setCookie } from '../utils/cookie';
 import { useQuery } from '@tanstack/react-query';
 import {getprofile} from "../services/user"
 function Header() {
-  const [showDetails, setShowDetails] = useState(true);
+  const [showDetails, setShowDetails] = useState(false);
   const {refetch}= useQuery(["profile"],getprofile)
   const clickhadn=()=>{
     setShowDetails(!showDetails)
